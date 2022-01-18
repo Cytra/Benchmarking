@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.swp
+/vendor/
+.phpunit*
+docker-compose.local.yml
+docker-compose.local.yaml
+/config/config.ini.php
