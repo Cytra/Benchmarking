@@ -8,48 +8,32 @@ namespace Benchmarking.Tests
     [MemoryDiagnoser]
     public class HashSetBenchmark
     {
-        private readonly InstallmentType[] _swedishFeeList =
+        private readonly PokerHand[] _pokerHands =
         {
-            InstallmentType.DeferredInterestApplied,
-            InstallmentType.FeeApplied,
-            InstallmentType.InterestApplied,
-            InstallmentType.PenaltyApplied,
-            InstallmentType.BranchChanged,
-            InstallmentType.DueDateChanged,
-            InstallmentType.DueDateChangedAdjustment,
-            InstallmentType.FeeCharged,
-            InstallmentType.InterestRateChanged,
-            InstallmentType.PenaltyRateChanged,
-            InstallmentType.TaxRateChanged,
-            InstallmentType.TermsChanged,
-        };
-
-        private readonly HashSet<InstallmentType> _swedishFeeHashSet = new HashSet<InstallmentType>()
-        {
-            InstallmentType.DeferredInterestApplied,
-            InstallmentType.FeeApplied,
-            InstallmentType.InterestApplied,
-            InstallmentType.PenaltyApplied,
-            InstallmentType.BranchChanged,
-            InstallmentType.DueDateChanged,
-            InstallmentType.DueDateChangedAdjustment,
-            InstallmentType.FeeCharged,
-            InstallmentType.InterestRateChanged,
-            InstallmentType.PenaltyRateChanged,
-            InstallmentType.TaxRateChanged,
-            InstallmentType.TermsChanged,
+            PokerHand.Flush,
+            PokerHand.FourOfAKind,
+            PokerHand.HighCard,
+            PokerHand.Pair,
         };
 
         [Benchmark]
         public bool ListContains()
         {
-            return _swedishFeeList.Contains(InstallmentType.AccountTerminated);
+            return _pokerHands.Contains(PokerHand.HighCard);
         }
+
+        private readonly HashSet<PokerHand> _pokerHandsHashSet = new ()
+        {
+            PokerHand.Flush,
+            PokerHand.FourOfAKind,
+            PokerHand.HighCard,
+            PokerHand.Pair,
+        };
 
         [Benchmark]
         public bool HashSetContains()
         {
-            return _swedishFeeHashSet.Contains(InstallmentType.AccountTerminated);
+            return _pokerHandsHashSet.Contains(PokerHand.HighCard);
         }
     }
 }
