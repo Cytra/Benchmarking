@@ -8,7 +8,8 @@ namespace Benchmarking.Tests
     //|---------------- |---------:|----------:|----------:|---------:|
     //|   NormalForEach | 1.143 ms | 0.0630 ms | 0.1858 ms | 1.201 ms |
     //| ParallelForEach | 1.426 ms | 0.0544 ms | 0.1605 ms | 1.475 ms |
-    [PerfCollectProfiler(performExtraBenchmarksRun: true)]
+    
+    //[PerfCollectProfiler(performExtraBenchmarksRun: true)]
     public class ParallelBenchmarking
     {
         [Benchmark]
