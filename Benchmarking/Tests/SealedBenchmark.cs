@@ -15,8 +15,6 @@ namespace Benchmarking.Tests
         public void Open_VoidMethod() => _bear.DoNothing();
     }
 
-
-
     public class Animal
     {
         public virtual void DoNothing() { }
@@ -30,7 +28,7 @@ namespace Benchmarking.Tests
         public override int GetAge() => 4;
     }
 
-    public class Husky : Animal
+    public sealed class Husky : Animal
     {
         public override void DoNothing() { }
         public override int GetAge() => 11;
