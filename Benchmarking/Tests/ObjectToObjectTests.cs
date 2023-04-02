@@ -12,7 +12,7 @@ namespace Benchmarking.Tests;
 public class ObjectToObjectTests
 {
     [Benchmark]
-    public void Mapster()
+    public void MapsterTest()
     {
         var payment = new Payment()
         {
