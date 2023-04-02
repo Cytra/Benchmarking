@@ -10,7 +10,7 @@ namespace Benchmarking
     {
         static async Task Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<ParallelBenchmarking>();
+            var summary = BenchmarkRunner.Run<ObjectToObjectTests>();
         }
     }
 }
