@@ -28,14 +28,6 @@ public class CollectionIterationPerformance
         for (var i = 0; i < CollectionLength; i++) yield return i;
     }
 
-    //[Benchmark]
-    //public void IEnumurableConsumerWithGeneration()
-    //{
-    //    var enumerable = IEnumurable();
-    //    var total = 0;
-    //    foreach (var item in enumerable) total += item;
-    //}
-
     [Benchmark]
     public void EnumerableConsumer()
     {
@@ -51,14 +43,6 @@ public class CollectionIterationPerformance
         return result;
     }
 
-    //[Benchmark]
-    //public void HashSetConsumerWithGeneration()
-    //{
-    //    var hashSet = GetHashSet();
-    //    var total = 0;
-    //    foreach (var item in hashSet) total += item;
-    //}
-
     [Benchmark]
     public void HashSetConsumer()
     {
@@ -73,14 +57,6 @@ public class CollectionIterationPerformance
 
         return result;
     }
-
-    //[Benchmark]
-    //public void ArrayConsumerWithGeneration()
-    //{
-    //    var array = GetArray();
-    //    var total = 0;
-    //    foreach (var item in array) total += item;
-    //}
 
     [Benchmark]
     public void ArrayConsumer()
@@ -102,16 +78,6 @@ public class CollectionIterationPerformance
     //        stackSum += value;
     //}
 
-    //[Benchmark]
-    //public void ParallelForWithGeneration()
-    //{
-    //    var array = GetArray();
-
-    //    var total = 0;
-
-    //    Parallel.For(0, array.Length, x => { total += x; });
-    //}
-
     [Benchmark]
     public void ParallelForConsumer()
     {
@@ -127,14 +93,6 @@ public class CollectionIterationPerformance
         return result;
     }
 
-    //[Benchmark]
-    //public void ListConsumerWithGeneration()
-    //{
-    //    var list = GetList();
-    //    var total = 0;
-    //    foreach (var item in list) total += item;
-    //}
-
     [Benchmark]
     public void ListConsumer()
     {
@@ -149,14 +107,6 @@ public class CollectionIterationPerformance
 
         return result;
     }
-
-    //[Benchmark]
-    //public void SortedSetConsumerWithGeneration()
-    //{
-    //    var sorterSet = GetSortedSet();
-    //    var total = 0;
-    //    foreach (var item in sorterSet) total += item;
-    //}
 
     [Benchmark]
     public void SortedSetConsumer()
